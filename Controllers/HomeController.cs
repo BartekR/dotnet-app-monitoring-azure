@@ -34,5 +34,12 @@ namespace videowebapp.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
+        [HttpPost]
+        public ActionResult Like(string button)
+        {
+            ViewBag.Message = "Thank you for your response";
+            return View("Index");
+        }
+
     }
 }
